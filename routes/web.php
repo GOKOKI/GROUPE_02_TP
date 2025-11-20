@@ -60,3 +60,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('professor/dashboard', [\App\Http\Controllers\DashboardController::class, 'professor'])->middleware('role:professor')->name('professor.dashboard');
     Route::get('student/dashboard', [\App\Http\Controllers\DashboardController::class, 'student'])->middleware('role:student')->name('student.dashboard');
 });
+
+Route::post('attribuer-note', [\App\Http\Controllers\AttribuerNoteController::class, 'attribuerNote'])->name('attribuer.note');
